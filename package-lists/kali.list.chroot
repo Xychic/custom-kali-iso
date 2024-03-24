@@ -1,0 +1,35 @@
+# You always want those
+kali-linux-core
+kali-desktop-live
+
+# Kali Packages
+# kali-linux-everything
+
+# Graphical desktop
+kali-desktop-kde
+
+# Additions
+btop
+checksec
+chntpw
+eza
+feh
+fzf
+ncdu
+neofetch
+neovim
+python-is-python3
+python2
+qemu-system
+rlwrap
+
+
+# Other Requirements
+default-jdk
+default-jre
+curl
+git
+live-build
+cdebootstrap
+ubuntu-dev-tools
+
