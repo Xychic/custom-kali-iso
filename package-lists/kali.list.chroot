@@ -3,7 +3,7 @@ kali-linux-core
 kali-desktop-live
 
 # Kali Packages
-# kali-linux-everything
+kali-linux-everything
 
 # Graphical desktop
 kali-desktop-kde
@@ -23,7 +23,6 @@ python2
 qemu-system
 rlwrap
 
-
 # Other Requirements
 default-jdk
 default-jre
@@ -32,4 +31,3 @@ git
 live-build
 cdebootstrap
 ubuntu-dev-tools
-

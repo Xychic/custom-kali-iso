@@ -1,0 +1,15 @@
+#!/bin/bash
+
+release=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/carlospolop/PEASS-ng/releases/latest | cut -d / -f 8)
+target_dir=/usr/share/peass-ng
+items=(linpeas.sh linpeas_darwin_amd64 linpeas_darwin_arm64 linpeas_fat.sh linpeas_linux_386 linpeas_linux_amd64 linpeas_linux_arm linpeas_linux_arm64 winPEAS.bat winPEASany.exe winPEASany_ofs.exe winPEASx64.exe winPEASx64_ofs.exe winPEASx86.exe winPEASx86_ofs.exe)
+
+mkdir -p $target_dir
+
+for item in "${items[@]}"; do
+    wget https://github.com/carlospolop/PEASS-ng/releases/download/$release/$item -P $target_dir
+
+    if [[ "$item" =~ ^"linpeas" ]]; then
+        chmod +x $target_dir/$item
+    fi
+done
