@@ -8,7 +8,7 @@ rm -f packages.microsoft.gpg
 
 apt-get install apt-transport-https
 apt-get update
-apt-get install code
+apt-get install code mypy -y
 
 
 extensions=(aaron-bond.better-comments \
