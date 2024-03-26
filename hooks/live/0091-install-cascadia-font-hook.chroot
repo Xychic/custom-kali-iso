@@ -1,0 +1,12 @@
+#!/bin/bash
+
+release=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/microsoft/cascadia-code/releases/latest | cut -d / -f 8)
+
+mkdir -vp /tmp/cascadia
+curl -L https://github.com/microsoft/cascadia-code/releases/download/$release/CascadiaCode-${release:1}.zip -o /tmp/cascadia/cascadia.zip
+
+apt-get install unzip
+unzip /tmp/cascadia/cascadia.zip -d /tmp/cascadia -x *.otf *.woff2
+mkdir -vp /usr/share/fonts/
+mv -v /tmp/cascadia/ttf /usr/share/fonts/cascadia-code
+rm -rfv /tmp/cascadia

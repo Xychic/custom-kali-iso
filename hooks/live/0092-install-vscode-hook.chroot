@@ -1,0 +1,34 @@
+#!/bin/bash
+
+apt-get install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+
+apt-get install apt-transport-https
+apt-get update
+apt-get install code mypy -y
+
+
+extensions=(aaron-bond.better-comments \
+davidanson.vscode-markdownlint \
+emmanuelbeziat.vscode-great-icons \
+esbenp.prettier-vscode \
+formulahendry.code-runner \
+gruntfuggly.todo-tree \
+matangover.mypy \
+ms-python.black-formatter \
+ms-python.debugpy \
+ms-python.python \
+ms-python.vscode-pylance \
+njqdev.vscode-python-typehint \
+streetsidesoftware.code-spell-checker \
+usernamehw.errorlens)
+
+mkdir -p /etc/skel/.config/Code
+mkdir -p /etc/skel/.vscode/extensions
+
+for item in "${extensions[@]}"; do
+    code --no-sandbox --user-data-dir /etc/skel/.config/Code --extensions-dir /etc/skel/.vscode/extensions --install-extension $item
+done

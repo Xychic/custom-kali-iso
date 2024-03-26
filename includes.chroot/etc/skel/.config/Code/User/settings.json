@@ -1,0 +1,55 @@
+{
+    "MarkdownPaste.path": "${fileDirname}/images",
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cSpell.language": "en-GB",
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMap": {
+      "python": "cd $dir && python -u $fileName",
+    },
+    "code-runner.ignoreSelection": true,
+    "code-runner.runInTerminal": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.detectIndentation": true,
+    "editor.fontFamily": "'Cascadia Mono',monospace",
+    "editor.fontLigatures": false,
+    "editor.guides.bracketPairs": true,
+    "editor.renderWhitespace": "all",
+    "editor.stickyScroll.enabled": false,
+    "editor.suggestSelection": "first",
+    "errorLens.enabledDiagnosticLevels": [
+      "error",
+      "warning"
+    ],
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "prettier.configPath": ".prettierrc",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "strict",
+    "python.languageServer": "Pylance",
+    "security.workspace.trust.untrustedFiles": "open",
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.defaultLocation": "editor",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "update.mode": "none",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.zoomLevel": 1,
+    "workbench.iconTheme": "vscode-great-icons"
+}
