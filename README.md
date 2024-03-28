@@ -3,6 +3,7 @@
 A custom Kali Linux ISO configuration that can be built using [kali-live-build-config](https://gitlab.com/kalilinux/build-scripts/live-build-config)
 
 ## What's Included
+
 - `kali-linux-everything` meta-package
 - [`PEASS-ng`](https://github.com/carlospolop/PEASS-ng)
 - Custom desktop layout & wallpaper
