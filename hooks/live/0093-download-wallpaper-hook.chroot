@@ -1,0 +1,5 @@
+#!/bin/bash
+
+mkdir -p /usr/share/wallpapers
+
+curl -L https://raw.githubusercontent.com/Xychic/desktop-wallpapers/master/kali.svg -o /usr/share/wallpapers/kali.svg
